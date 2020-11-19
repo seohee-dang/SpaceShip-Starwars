@@ -90,8 +90,13 @@ class Player(pygame.sprite.Sprite):
 class Enemy(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
-        path_img = os.path.join(os.path.dirname(
-            os.path.abspath(__file__)), "data", "images", "resources", "droid.png")
+        random_Enemy = random.randint(1, 2);
+        if random_Enemy == 1 : 
+            path_img = os.path.join(os.path.dirname(
+                os.path.abspath(__file__)), "data", "images", "resources", "droid.png")
+        else : 
+            path_img = os.path.join(os.path.dirname(
+                os.path.abspath(__file__)), "data", "images", "resources", "droid2.png")
         self.image = load_image(path_img, False)
         self.rect = self.image.get_rect()
         # Random positioning
