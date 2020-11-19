@@ -123,8 +123,9 @@ class Game(object):
                                 self.exit_game()
                             if event.key == K_SPACE:
                                 laser_player_sound.play()
+                                ###############################################################################################################################
                                 group_laser_player.add(
-                                    PlayerLaser(player.rect.midtop))
+                                    PlayerLaser(player.rect.midtop, energy))
                         elif event.type == KEYUP:  # We ask if you have stopped pressing any key
                             player.x_speed, player.y_speed = (0, 0)
 

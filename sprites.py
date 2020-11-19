@@ -178,10 +178,14 @@ class Asteroid(pygame.sprite.Sprite):
 #   LASER sprite
 # ------------------------------------------------------------------------------
 class PlayerLaser(pygame.sprite.Sprite):
-    def __init__(self, pos):
+    def __init__(self, pos, energy):
         pygame.sprite.Sprite.__init__(self)
-        self.image = load_image(os.path.join(
-            'data', 'images', 'resources', 'laser1.png'), False)
+        if energy >= 50:
+            self.image = load_image(os.path.join(
+                'data', 'images', 'resources', 'laser1.png'), False)
+        else : 
+            self.image = load_image(os.path.join(
+                'data', 'images', 'resources', 'laser3.png'), False)
         self.rect = self.image.get_rect()
         self.rect.center = pos
 
