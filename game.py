@@ -85,17 +85,17 @@ class Game(object):
             # We create an object to simulate the explosion.
             group_explosion = pygame.sprite.RenderUpdates()
             # Configure the boxes that will contain text
-            points_box = TextBox("Points: {}".format(points), font1, 10, 0)
+            points_box = TextBox("Points: {}".format(points), font1, 10, 5)
             top_score_box = TextBox(
-                "Best score: {}".format(top_score), font1, 10, 40)
+                "Best score: {}".format(top_score), font1, 10, 45)
             objectives_box = TextBox(
-                "Objective: {}".format(OBJECTIVE_LVL - count_destroyed_droids), font1, 10, 80)
+                "Objective: {}".format(OBJECTIVE_LVL - count_destroyed_droids), font1, 10, 85)
             time_box = TextBox("Time: {0:.2f}".format(
                 initial_time), font1, WINDOW_WIDTH - 150, 0)
             energy_box = TextBox("Energy: {}".format(
-                energy), font1, WINDOW_WIDTH - 150, 40)
+                energy), font1, WINDOW_WIDTH - 150, 45)
             info_box = TextBox(
-                "Press: ESC-Exit     F1-Help     F2-About...", font1, 10, WINDOW_HEIGHT - 40)
+                "Press: ESC-Exit     F1-Help     F2-About...", font1, 10, WINDOW_HEIGHT - 20)
             group_box = pygame.sprite.RenderUpdates(
                 points_box, top_score_box, objectives_box, time_box, energy_box, info_box)
 
@@ -384,27 +384,27 @@ class Game(object):
         text1 = "Asteroids"
         text2 = "Destroy them and you'll earn points."
         text3 = "If you get hit, you lose energy."
-        self.draw_text(text1, font3, window, WINDOW_WIDTH * 0.2, WINDOW_HEIGHT * 0.06)
-        self.draw_text(text2, font2, window, WINDOW_WIDTH * 0.1, WINDOW_HEIGHT * 0.09)
-        self.draw_text(text3, font2, window, WINDOW_WIDTH * 0.1, WINDOW_HEIGHT * 0.11)
+        self.draw_text(text1, font3, window, WINDOW_WIDTH * 0.18, WINDOW_HEIGHT * 0.05)
+        self.draw_text(text2, font2, window, WINDOW_WIDTH * 0.1, WINDOW_HEIGHT * 0.1)
+        self.draw_text(text3, font2, window, WINDOW_WIDTH * 0.1, WINDOW_HEIGHT * 0.12)
         text1 = "Energetic asteroids release"
         text2 = "energy. Capture them!"
-        self.draw_text(text1, font6, window, WINDOW_WIDTH * 0.02, WINDOW_HEIGHT * 0.25)
-        self.draw_text(text2, font6, window, WINDOW_WIDTH * 0.04, WINDOW_HEIGHT * 0.28)
+        self.draw_text(text1, font6, window, WINDOW_WIDTH * 0.11, WINDOW_HEIGHT * 0.25)
+        self.draw_text(text2, font6, window, WINDOW_WIDTH * 0.13, WINDOW_HEIGHT * 0.28)
         
         # Energy
         text1 = "Energy"
         text2 = "Recovers energy. Capture them!"
         self.draw_text(text1, font3, window, WINDOW_WIDTH * 0.18, WINDOW_HEIGHT * 0.45)
-        self.draw_text(text2, font2, window, WINDOW_WIDTH * 0.08, WINDOW_HEIGHT * 0.55)
+        self.draw_text(text2, font2, window, WINDOW_WIDTH * 0.1, WINDOW_HEIGHT * 0.55)
 
         # Droid
         text1 = "Droid"
         text2 = "Destroy them and you'll earn points."
-        self.draw_text(text1, font3, window, WINDOW_WIDTH * 0.75, WINDOW_HEIGHT * 0.06)
-        self.draw_text(text2, font2, window, WINDOW_WIDTH * 0.6, WINDOW_HEIGHT * 0.09)
+        self.draw_text(text1, font3, window, WINDOW_WIDTH * 0.75, WINDOW_HEIGHT * 0.05)
+        self.draw_text(text2, font2, window, WINDOW_WIDTH * 0.63, WINDOW_HEIGHT * 0.1)
         text1 = "Avoid lasers or you'll lose energy."
-        self.draw_text(text1, font6, window, WINDOW_WIDTH * 0.65, WINDOW_HEIGHT * 0.3)
+        self.draw_text(text1, font6, window, WINDOW_WIDTH * 0.63, WINDOW_HEIGHT * 0.32)
 
         # Keys
         self.draw_text("Move up", font6, window, WINDOW_WIDTH * 0.46, WINDOW_HEIGHT * 0.63)
