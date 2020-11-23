@@ -44,8 +44,8 @@ class Game(object):
         logo = load_image(path.join('data', 'images',
                                     'background', 'start_logo.png'))
         # Displays the start screen
-        self.draw_text("Press a key for start", font1,
-                       window, (WINDOW_WIDTH / 3), (WINDOW_HEIGHT / 3) + 100)
+        self.draw_text("Press any key for START", font7,
+                       window, (WINDOW_WIDTH / 3), (WINDOW_HEIGHT / 3) + 200)
         window.blit(logo, (150, 100))
         pygame.display.update()
 
